@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataActivity"
+    tools:openDrawer="left"
+    android:id="@+id/drawer_layout"
+    android:background="#FFF">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/progress_bar_layout_comment"
+            android:visibility="visible"
+            >
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                >
+
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_result_comment"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:theme="@style/RedAccent"
+                    android:visibility="visible"
+                    android:layout_centerHorizontal="true"
+                    />
+                <TextView
+                    android:layout_below="@+id/progress_bar_result_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#000"
+                    android:text="Loading..."
+                    android:visibility="visible"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/problem_layout">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noproblem_layout"
+                android:visibility="gone"
+                >
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/addbackground"
+                    android:background="@null"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Add your problem"
+                    android:layout_marginTop="60dp"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#000"/>
+            </RelativeLayout>
+
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/toolbar_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    app:layout_scrollFlags="scroll|enterAlways">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView
+                            android:id="@+id/name_place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="All Problems"
+                            android:textSize="16sp"
+                            android:textColor="#070808"
+                            android:fontFamily="@font/roboto"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"/>
+                        <ImageButton
+                            android:id="@+id/menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_menu_black_24dp"
+                            android:background="@null"
+                            android:layout_alignParentLeft="true"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerCrop"
+                            />
+
+                        <ImageButton
+                            android:id="@+id/add_problem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_add_black_24dp"
+                            android:background="@null"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="16dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerCrop"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/problems_layout"
+                android:layout_below="@+id/toolbar_top"
+                android:layout_alignParentBottom="true">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/problems_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_above="@+id/first_line"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/first_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#6C757B"
+                        />
+
+                    <TextView
+                        android:id="@+id/leader_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CC000000"
+                        android:layout_marginTop="4dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Does your leader solve your problems?"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/mid_line"
+                        android:layout_below="@+id/leader_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="#6C757B"
+                        android:layout_marginTop="4dp"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/text_leader"
+                        android:layout_below="@+id/mid_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/yes_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 Yes"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:textColor="#6C757B"
+                            android:fontFamily="@font/roboto_medium"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/no_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 No"
+                            android:layout_centerVertical="true"
+                            android:textColor="#6C757B"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/roboto_medium"
+                            />
+
+                        <TextView
+                            android:id="@+id/comment_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 Comments"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#6C757B"
+                            android:layout_marginRight="16dp"
+                            android:fontFamily="@font/roboto_medium"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/mid_line_2"
+                        android:layout_below="@+id/text_leader"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="#6C757B"
+                        android:layout_marginTop="4dp"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/leader_last"
+                        android:layout_below="@+id/mid_line_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/thumb_up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_thumb_up_black_24dp"
+                            android:scaleType="centerCrop"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:visibility="gone"/>
+
+                        <ImageButton
+                            android:id="@+id/thumb_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_thumb_down_black_24dp"
+                            android:scaleType="centerCrop"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:paddingTop="4dp"
+                            android:paddingRight="16dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="16dp"
+                            android:visibility="gone"/>
+
+
+                        <ImageButton
+                            android:id="@+id/comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_comment_black_24dp"
+                            android:scaleType="centerCrop"
+                            android:paddingRight="16dp"
+                            android:paddingTop="4dp"
+                            android:paddingLeft="16dp"
+                            android:paddingBottom="4dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@null"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_below="@+id/leader_last"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#6C757B"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/naviview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/itemmenu"
+            app:itemTextColor="#E5070808"
+            android:layout_gravity="start"
+            android:background="#FFF"
+            />
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "83286925028",
+    "firebase_url": "https://public-problems-a81cf.firebaseio.com",
+    "project_id": "public-problems-a81cf",
+    "storage_bucket": "public-problems-a81cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83286925028:android:ca42ac97a4a9ce85fdd6f1",
+        "android_client_info": {
+          "package_name": "com.rahulkantwa.publicproblems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83286925028-uf6a566r57qlqoe21883soeqjifoh2ie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahulkantwa.publicproblems",
+            "certificate_hash": "d8dbc31055e6dd23c6bc1830f4b57b7cf3471d25"
+          }
+        },
+        {
+          "client_id": "83286925028-kagjgicbgcq3ju7l8rfgnpkph2ml8eic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFoL3qxSF8yBemJcNL4enGvnFhxCelczs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83286925028-kagjgicbgcq3ju7l8rfgnpkph2ml8eic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83286925028:android:1edab8be3d69acf0fdd6f1",
+        "android_client_info": {
+          "package_name": "com.rahulkantwa.publicproblemsindia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83286925028-3r4jrdvqt2e5fl9gcp9s3qbuohpqgmnu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahulkantwa.publicproblemsindia",
+            "certificate_hash": "d8dbc31055e6dd23c6bc1830f4b57b7cf3471d25"
+          }
+        },
+        {
+          "client_id": "83286925028-kagjgicbgcq3ju7l8rfgnpkph2ml8eic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFoL3qxSF8yBemJcNL4enGvnFhxCelczs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83286925028-kagjgicbgcq3ju7l8rfgnpkph2ml8eic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

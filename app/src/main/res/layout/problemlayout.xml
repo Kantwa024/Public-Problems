@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/problem_user_profile"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="#EFEFEF"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/problem_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/problem_user_profile"
+            android:layout_marginLeft="5dp"
+            android:textColor="#080708"
+            android:fontFamily="@font/roboto_medium"
+            />
+
+        <TextView
+            android:id="@+id/problem_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2h"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#080708"
+            android:fontFamily="@font/roboto_medium"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:id="@+id/problem_image"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:maxWidth="350dp"
+        android:background="#EFEFEF"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/problem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="problem"
+        android:textColor="#6C757B"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#6C757B"
+        android:layout_marginTop="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
+
+        <ImageButton
+            android:id="@+id/thumb_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_thumb_up_black_24dp"
+            android:scaleType="centerCrop"
+            android:background="@null"
+            android:paddingLeft="8dp"
+            android:paddingRight="5dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/problem_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:textColor="#6C757B"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_toRightOf="@+id/thumb_up"
+            />
+
+        <ImageButton
+            android:id="@+id/problem_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_comment_black_24dp"
+            android:scaleType="centerCrop"
+            android:layout_toLeftOf="@+id/comments_count"
+            android:paddingRight="5dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:background="@null"
+            />
+
+        <TextView
+            android:id="@+id/comments_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#6C757B"
+            android:fontFamily="@font/roboto_medium"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#EFEFEF"
+        android:layout_marginBottom="8dp"
+        />
+
+</LinearLayout>

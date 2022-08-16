@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProblem"
+    android:padding="8dp"
+    android:background="#FFF">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_result_comment_1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:theme="@style/RedAccent"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/line_1"
+                android:layout_alignParentTop="true"
+                android:layout_below="@id/progress_bar_result_comment_1"
+                android:layout_marginTop="24dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/problem_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:background="#DCDCDC"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_below="@+id/problem_image"
+                        android:id="@+id/maxlen_problem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        android:textColor="#657786"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="18sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"/>
+
+                    <EditText
+                        android:layout_below="@+id/maxlen_problem"
+                        android:id="@+id/problem_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:inputType="textMultiLine"
+                        android:textColor="#E5070808"
+                        android:fontFamily="@font/arimo"
+                        android:hint="Your problem"
+                        android:scrollHorizontally="true"
+                        android:gravity="start"
+                        android:layout_marginTop="8dp"/>
+                </RelativeLayout>
+
+            </ScrollView>
+
+    <Button
+        android:padding="4dp"
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:text="Upload"
+        android:textColor="#FFF"
+        android:background="@drawable/buttonbackground"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#6C757B"
+        android:layout_marginBottom="8dp"
+        android:layout_above="@+id/upload_button"
+        />
+
+
+</RelativeLayout>

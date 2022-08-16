@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity"
+    android:padding="16dp"
+    android:background="#FFF">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_full"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+           />
+
+    <TextView
+        android:layout_below="@id/image_full"
+        android:id="@+id/name_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#E5070808"
+        android:visibility="visible"
+        android:fontFamily="@font/arimo"
+        android:layout_marginTop="2dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_admin"
+        android:layout_marginTop="24dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#E5070808"
+            android:visibility="visible"
+            android:fontFamily="@font/arimo"
+            android:layout_marginTop="2dp"
+            android:text="About the app: The common man encounters a lot of problems in his daily routine. And he does not have enough time to go the leader of his area and tell the problem.
+So in this app he can upload his problem whose notification will go to all the people of that area so that the leader will know that someone in this area has this problem and how many people have the same problem, it will also be known.. This will help people to get solutions to their problems and there will be development in every field. And after that he can also rate his leader whether our leader is working or not?."
+            />
+    </ScrollView>
+</RelativeLayout>

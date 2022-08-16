@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progress_bar_layout_comment"
+        android:visibility="visible"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            >
+
+            <ProgressBar
+                android:id="@+id/progress_bar_result_comment"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:theme="@style/RedAccent"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_below="@+id/progress_bar_result_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:text="Loading..."
+                android:visibility="visible"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/recycler_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comment_problem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_bottom"
+            android:layout_alignParentTop="true"
+            />
+        <RelativeLayout
+            android:id="@+id/bottom_bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/text_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scrollHorizontally="true"
+                android:maxLines="4"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textColor="#E5070808"
+                android:fontFamily="@font/arimo"
+                android:hint="Comment...."
+                android:background="@drawable/spinnerbackground"
+                android:padding="8dp"
+                android:layout_marginRight="48dp"/>
+
+            <ImageView
+                android:id="@+id/image_off"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_send_off_black_24dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                />
+            <ImageView
+                android:id="@+id/image_on"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_send_black_24dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

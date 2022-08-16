@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:padding="8dp"
+    android:background="#FFF">
+
+        <EditText
+            android:id="@+id/text_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollHorizontally="true"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textColor="#E5070808"
+            android:fontFamily="@font/arimo"
+            android:imeOptions="actionSearch"
+            android:hint="Rajasthan,Jaipur" />
+
+        <ProgressBar
+            android:layout_below="@+id/text_search"
+            android:id="@+id/progress_bar_search"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:theme="@style/RedAccent"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/text_search"
+           />
+
+</RelativeLayout>

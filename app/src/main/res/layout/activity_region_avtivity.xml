@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegionAvtivity"
+    android:padding="16dp"
+    android:background="#FFF">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_result_comment_1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:theme="@style/RedAccent"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar_layout_region"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible"
+        >
+
+        <ProgressBar
+            android:id="@+id/progress_bar_result_comment"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:theme="@style/RedAccent"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_below="@+id/progress_bar_result_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000"
+            android:text="Loading..."
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_region"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="States and union territories"
+            android:textColor="#657786"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"/>
+        <Spinner
+            android:layout_below="@+id/state"
+            android:id="@+id/state_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinnerbackground"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:layout_below="@+id/state_spinner"
+            android:id="@+id/district"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Districts"
+            android:textColor="#657786"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"/>
+
+        <Spinner
+            android:layout_below="@+id/district"
+            android:id="@+id/district_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinnerbackground"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_below="@id/district_spinner"
+            android:id="@+id/tehsil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tehsils"
+            android:textColor="#657786"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"/>
+
+        <Spinner
+            android:layout_below="@+id/tehsil"
+            android:id="@+id/tehsil_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="State"
+            android:textColor="#657786"
+            android:fontFamily="@font/roboto"
+            android:background="@drawable/spinnerbackground"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#6C757B"
+            android:layout_above="@+id/login_button"
+            />
+
+        <Button
+            android:padding="8dp"
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:text="Next"
+            android:textColor="#FFF"
+            android:fontFamily="@font/roboto"
+            android:background="@drawable/buttonbackground"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

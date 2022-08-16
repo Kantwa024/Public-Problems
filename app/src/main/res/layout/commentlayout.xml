@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/comment_user_profile"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="#EFEFEF"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="4dp"
+        />
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/comment_user_profile"
+        android:background="@drawable/commentbackground"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#070808"
+            android:text="Name"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"
+            />
+
+        <TextView
+            android:id="@+id/comment_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo"
+            android:text="Comment"
+            android:textColor="#E5070808"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

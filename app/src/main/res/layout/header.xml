@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFF">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_header"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:src="#DCDCDC"/>
+
+    <TextView
+        android:layout_below="@+id/profile_header"
+        android:id="@+id/header_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#CC000000"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/arimo"
+        android:text="UserName"/>
+
+    <TextView
+        android:layout_below="@+id/header_username"
+        android:id="@+id/header_mailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6C757B"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
+        android:text="Usermailid"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/header_mailid"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#6C757B"
+        android:layout_marginTop="36dp"
+        />
+
+</RelativeLayout>

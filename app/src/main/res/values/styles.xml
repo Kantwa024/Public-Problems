@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor">#FFF</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="colorPrimaryDark">#FFF</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorPrimary">#FFF</item>
+        <item name="colorAccent">#00ACEE</item>
+    </style>
+
+    <style name="RedAccent" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">#00ACEE</item>
+    </style>
+
+    <style name="Theme.App.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">#6C757B</item>
+        <item name="colorControlActivated">#00ACEE</item>
+        <item name="colorControlHighlight">#00ACEE</item>
+    </style>
+</resources>

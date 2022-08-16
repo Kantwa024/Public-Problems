@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginShowPageActivitity"
+    android:background="#FFF">
+
+
+    <TextView
+        android:id="@+id/text_login_screen"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/roboto"
+        android:text="If you have a problem, share it with people."
+        android:textColor="#14171A"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_below="@+id/text_login_screen"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:text="Create account"
+        android:textColor="#FFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/buttonbackground"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Have an account already?"
+        android:textColor="#657786"
+        android:layout_marginLeft="84dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/roboto"/>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Log in"
+        android:textColor="#00ACEE"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@+id/account_text"
+        android:paddingLeft="4dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingRight="16dp"
+        android:fontFamily="@font/roboto"/>
+</RelativeLayout>
